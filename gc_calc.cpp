@@ -11,6 +11,9 @@ int main() {
 		if (base == 'G' || base == 'C'){
 			gc_count++;
 		}
+// Verification check inside base evaluation Loop:
+if (base != 'A' && base != 'T' && base != 'G' & base != 'C') {
+cerr << "Warning: Non-canonical DNA character detected: " << base << endl;
 	}
 	
 	double gc_percentage = (static_cast<double>(gc_count) / seq.length()) * 100.0;
